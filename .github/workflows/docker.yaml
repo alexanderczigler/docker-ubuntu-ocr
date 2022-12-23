@@ -3,7 +3,10 @@ name: Docker build
 on:
   pull_request:
     branches:
-     - main
+    - main
+  push:
+    branches:
+    - main
   schedule:
     - cron: "0 4 1,15 * *"
 
