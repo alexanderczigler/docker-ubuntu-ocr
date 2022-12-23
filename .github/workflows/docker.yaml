@@ -28,6 +28,4 @@ jobs:
         uses: docker/build-push-action@v3
         with:
           push: true
-          tags:
-            - alexanderczigler/ubuntu-ocr
-            - alexanderczigler/ubuntu-ocr:kinetic
+          tags: alexanderczigler/ubuntu-ocr:latest,alexanderczigler/ubuntu-ocr:kinetic
