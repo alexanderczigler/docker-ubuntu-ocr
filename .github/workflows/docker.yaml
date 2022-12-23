@@ -1,4 +1,4 @@
-name: Docker build
+name: Build
 
 on:
   pull_request:
@@ -12,7 +12,7 @@ on:
 
 jobs:
 
-  build:
+  docker:
     runs-on: ubuntu-latest
     steps:
       - name: 🛎️ Checkout
