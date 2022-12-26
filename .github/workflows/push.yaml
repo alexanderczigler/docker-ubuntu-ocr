@@ -1,9 +1,6 @@
-name: Build
+name: Push
 
 on:
-  pull_request:
-    branches:
-    - main
   push:
     branches:
     - main
@@ -12,7 +9,7 @@ on:
 
 jobs:
 
-  docker:
+  push:
     runs-on: ubuntu-latest
     steps:
       - name: 🛎️ Checkout
@@ -24,7 +21,7 @@ jobs:
           username: alexanderczigler
           password: ${{ secrets.DOCKER_HUB_TOKEN }}
 
-      - name: 🔧 Build and push (maintenance)
+      - name: 🔧 Build and push
         uses: docker/build-push-action@v3
         with:
           push: true
