@@ -1,4 +1,4 @@
-name: Push
+name: Release
 
 on:
   push:
@@ -9,7 +9,7 @@ on:
 
 jobs:
 
-  push:
+  release:
     runs-on: ubuntu-latest
     steps:
       - name: 🛎️ Checkout
@@ -21,8 +21,8 @@ jobs:
           username: alexanderczigler
           password: ${{ secrets.DOCKER_HUB_TOKEN }}
 
-      - name: 🔧 Build and push
+      - name: 🔧 Build and push to Docker Hub
         uses: docker/build-push-action@v3
         with:
           push: true
-          tags: alexanderczigler/ubuntu-ocr:latest,alexanderczigler/ubuntu-ocr:kinetic
+          tags: alexanderczigler/ubuntu-ocr:kinetic
