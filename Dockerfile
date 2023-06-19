@@ -1,4 +1,4 @@
-FROM ubuntu:kinetic-20230412
+FROM ubuntu:kinetic-20230605
 
 RUN apt-get update
 RUN apt-get -y install \
