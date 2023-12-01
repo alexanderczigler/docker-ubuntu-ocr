@@ -3,12 +3,11 @@ name: Release
 on:
   push:
     branches:
-    - main
+      - main
   schedule:
     - cron: "0 4 1,15 * *"
 
 jobs:
-
   release:
     runs-on: ubuntu-latest
     steps:
@@ -25,4 +24,4 @@ jobs:
         uses: docker/build-push-action@v5
         with:
           push: true
-          tags: alexanderczigler/ubuntu-ocr:kinetic
+          tags: alexanderczigler/ubuntu-ocr:mantic

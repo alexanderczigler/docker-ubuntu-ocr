@@ -1,4 +1,4 @@
-FROM ubuntu:kinetic-20230624
+FROM ubuntu:mantic-20231011
 
 RUN apt-get update
 RUN apt-get -y install \
