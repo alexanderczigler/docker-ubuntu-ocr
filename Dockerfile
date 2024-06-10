@@ -1,4 +1,4 @@
-FROM ubuntu:mantic-20240427
+FROM ubuntu:mantic-20240530
 
 RUN apt-get update
 RUN apt-get -y install \
